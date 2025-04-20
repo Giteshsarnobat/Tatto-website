@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 :root {
   --padding-inline-section: 20px;
+  --trans: all 0.3s linear;
 }
 
 .container {
@@ -15,107 +13,73 @@
 .container2 {
   max-width: 800px;
   margin-inline: auto;
-  /* background-color: aqua; */
 }
 
-/* Navbar */
-nav {
+/* Preloader */
+.preloader-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
-  z-index: 10;
-  /* box-shadow: 0 4px 8px rgba(34, 33, 33, 0.1); Add a box shadow to create the shadow effect */
-  /* padding: 10px; */
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3d7ee;
+  z-index: 9999;
 }
 
-.main-nav {
-  margin-top: 20px;
-  justify-content: space-between;
+.preloader-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 1000px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.glitch {
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
   position: relative;
+  animation: glitch 1s infinite;
 }
 
-.nav-link {
-  flex-basis: 730px;
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px purple;
+  }
+  50% {
+    text-shadow: -2px -2px rgb(192, 116, 192);
+  }
+  100% {
+    text-shadow: 2px 2px rgb(230, 182, 230);
+  }
 }
 
-.nav-link ul {
-  list-style: none;
-  justify-content: end;
-  gap: 40px;
+/* Hero */
+.hero-div {
+  position: relative;
+  height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
-.nav-toggle {
-  display: none;
-}
-
-.hover-link {
-  text-decoration: none;
+.hero-text-div {
+  position: absolute;
+  z-index: 2;
   color: black;
-  font-weight: 800;
 }
 
-.company-logo {
-  text-decoration: none;
+.hero-text-h1 {
+  width: 50vw;
+  font-size: 4.1vw;
   color: black;
-}
-
-#nav-btn {
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-}
-
-/* Header */
-.body-container {
-  background-color: #c48afa;
-  height: 750px;
-}
-
-.body-container .body-heading {
-  /* background-color: aqua; */
-  padding-top: 7rem;
-}
-
-.body-heading1 {
-  font-family: "Roboto";
-  font-size: 5rem;
-}
-
-.body-heading2 {
-  font-family: "Roboto", sans-serif;
-  margin-top: -48px;
-  font-size: 5rem;
-}
-
-.body-header-span {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-style: italic;
-}
-
-.body-para-text {
-  margin-top: -3.3rem;
-  /* background-color: beige; */
-}
-
-.first-para,
-.second-para,
-.third-para {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-}
-.first-para,
-.second-para {
-  margin-bottom: -1rem;
-}
-.span-text-para {
-  font-weight: bold;
-}
-
-.btn-div {
-  margin-top: 2rem;
+  font-weight: bolder;
+  z-index: 2;
 }
 
 .btn {
@@ -132,32 +96,238 @@ nav {
   background-color: white;
   color: black;
   cursor: pointer;
-  border: 1px solid black;
+  border: 0.09rem solid black;
 }
 
-.heading-section {
-  /* background-color: aqua; */
-  height: 550px;
-  display: flex;
+.btn-div {
+  margin-top: 2rem;
 }
 
-.heading-div {
-  /* background-color: coral; */
+.hero-text-para {
+  width: 35vw;
+  font-size: 1.2rem;
+}
+
+.hero-sec-btn {
+  margin-top: 2.5rem;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s linear;
+}
+
+.hero-sec-btn:hover {
+  background-color: white;
+  color: black;
+  border: 0.09rem solid black;
+}
+
+.hero-shape {
+  position: absolute;
+  height: 32vw;
+  width: 32vw;
+  border-radius: 50%;
+  /* background: linear-gradient(to top right, #8a49c7, #8c4bc8); */
+  background: linear-gradient(to top right, #c48afa, #ad6ee8);
+  top: 25%;
+  left: 40%;
+  filter: blur(90px);
+  animation: gooey 6s infinite alternate ease-in-out;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  z-index: 1;
 }
 
-.section-para1,
-.section-para2 {
-  font-size: 1.3rem;
-  font-family: "Roboto", sans-serif;
+@keyframes gooey {
+  from {
+    filter: blur(25px);
+    transform: translate(10%, -10%) skew(0);
+  }
+
+  to {
+    filter: blur(35px);
+    transform: translate(-10%, 10%) skew(-8deg);
+  }
 }
 
-.sec-para1-span,
-sec-para2-span {
-  font-weight: bold;
+/*old Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  /* box-shadow: 0 4px 8px rgba(34, 33, 33, 0.1); Add a box shadow to create the shadow effect */
+  /* padding: 10px; */
+  /* box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05); */
+}
+
+.nav-link {
+  flex-basis: 730px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hover-link {
+  text-decoration: none;
+  color: black;
+  /* font-weight: 800; */
+}
+
+#nav-btn {
+  text-decoration: none;
+}
+
+.hover-link:hover {
+  color: purple;
+}
+
+/* Navbar new */
+.navbar {
+  height: 12vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+.navbar-logo img {
+  width: 5rem;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  padding: 15px 16px;
+  /* border-radius: 5px; */
+}
+
+/* .nav-item a:hover {
+  border-bottom: 3px solid #c48afa;
+} */
+
+.nav-link-item {
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 4px;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav-link-item.active-link {
+  border-bottom: 2px solid purple;
+  font-weight: 600;
+  color: purple;
+}
+
+/* Dropdown */
+.services-submenu {
+  width: 8rem;
+  position: absolute;
+  top: 70px;
+  list-style: none;
+  text-align: start;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.services-submenu li {
+  cursor: pointer;
+  margin-left: -40px;
+}
+
+.services-submenu li a:hover {
+  width: 82%;
+  background: #c48afa;
+}
+
+.services-submenu.clicked {
+  display: none;
+}
+
+.submenu-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+}
+
+/* Small Tattoo Category */
+.category-com-div {
+  margin-bottom: 5rem;
+}
+.smallcategory-main-div {
+  margin-top: 12vh;
+  width: 100%;
+  height: 30vh;
+  background-color: #d2aef4;
+}
+
+.smallcategory-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100%;
+}
+
+.smallcategory-heading {
+  font-size: 3rem;
+}
+
+.smallCate-image-heading {
+  text-align: center;
+}
+
+/* slider tattoo gallery */
+.slider-main-div {
+  background-color: #d2aef4;
+  padding-top: 2.5rem;
+  padding-bottom: 12rem;
 }
 
 .image_wrapper {
@@ -173,23 +343,15 @@ sec-para2-span {
   cursor: pointer;
 }
 
-.slider-main-div {
-  background-color: #d2aef4;
-  padding-top: 2.5rem;
-  padding-bottom: 12rem;
-}
-
 .slider-text-heading {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: "Roboto", sans-serif;
   font-weight: bolder;
 }
 
 .slider-text-div {
   margin-top: 10rem;
-  /* background-color: aqua; */
 }
 
 .slider-text-para {
@@ -200,7 +362,6 @@ sec-para2-span {
   line-height: 1.6;
   margin: 0 auto;
   white-space: pre-line;
-  font-family: "Roboto";
 }
 
 .slider-heart-png {
@@ -226,7 +387,6 @@ sec-para2-span {
 }
 
 .feature-text-heading {
-  font-family: "Roboto";
   font-size: 3rem;
   font-weight: bold;
 }
@@ -237,7 +397,6 @@ sec-para2-span {
   letter-spacing: 0.2px;
   word-spacing: 1px;
   max-width: 25rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .heart-png {
@@ -250,7 +409,6 @@ sec-para2-span {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .feature-img1 {
@@ -284,13 +442,11 @@ sec-para2-span {
 .teamcard-para {
   text-align: center;
   color: purple;
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 2rem;
 }
 .teamcard-header {
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 2.8rem;
   margin-bottom: 2.5rem;
@@ -306,8 +462,7 @@ sec-para2-span {
 }
 
 .teamcard-img:hover {
-  box-shadow: 0 0 10px #888;
-  border-radius: 0.5rem;
+  transform: scale(1.1);
 }
 
 .teamcard-name {
@@ -320,8 +475,84 @@ sec-para2-span {
   margin-inline: auto;
 }
 
+/* TattooCategory */
+.TattooCategory-main-div {
+  margin-top: 80px;
+  position: relative;
+}
+
+.tattoocategry-card {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 55px;
+  overflow: visible;
+}
+
+.tattooCategory-heading {
+  text-align: center;
+}
+
+.tattooCategory-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.tattoocategory-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); */
+  box-shadow: 1px 3px 36px -9px rgba(0, 0, 0, 0.46);
+}
+
+.tattoocategory-btn {
+  width: 60%;
+  padding: 15px;
+  color: black;
+  background-color: white;
+  border: 0.09rem solid black;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 8px;
+  position: relative;
+  font-size: medium;
+  font-weight: 600;
+  z-index: 1;
+  transition: var(--trans);
+  overflow: hidden;
+}
+
+.tattoocategory-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%);
+  transition: var(--trans);
+}
+
+.tattoocategory-btn:hover:before {
+  transform: translate(0);
+  z-index: -1;
+}
+
+.tattoocategory-btn:hover {
+  color: white;
+}
+
+/*Services */
 .services-main-div {
-  background-color: #efeff3;
+  background-color: #d2aef4;
   margin-top: 130px;
 }
 
@@ -338,7 +569,6 @@ sec-para2-span {
 
 .services-heading {
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 2.8rem;
   text-align: center;
@@ -356,8 +586,8 @@ sec-para2-span {
 }
 
 .service-card:hover {
-  transform: scale(1.1); /* Zoom effect */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  transform: translateY(-10px) scale(1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service-card-img {
@@ -365,22 +595,21 @@ sec-para2-span {
 }
 
 .service-card-heading {
-  font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 .service-card-info {
-  font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   line-height: 1.4;
+  color: rgb(98, 95, 95);
 }
 
 /* Background-video */
 .video-container {
   position: relative;
   width: 100%;
-  height: 80vh; /* Full screen height */
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -391,7 +620,7 @@ sec-para2-span {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures video covers full screen */
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -404,7 +633,6 @@ sec-para2-span {
   color: black;
   font-size: 2rem;
   font-weight: bold;
-  font-family: "Roboto", sans-serif;
 }
 
 .cta-button {
@@ -420,11 +648,47 @@ sec-para2-span {
 }
 
 .cta-button:hover {
-  background-color: #333; /* Slightly lighter black */
-  transform: scale(1.1); /* Slight zoom effect */
+  background-color: #333;
+  transform: scale(1.1);
 }
 
 /* Appointment form */
+.form-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 12px 12px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+}
+
+.form-group label {
+  position: absolute;
+  top: 13px;
+  left: 46px;
+  color: #aaa;
+  background: white;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  padding: 0 4px;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -5px;
+  left: 45px;
+  font-size: 13px;
+  color: #333;
+}
+
 .form-overlay {
   position: fixed;
   top: 0;
@@ -438,9 +702,17 @@ sec-para2-span {
   z-index: 20;
 }
 
-/* Form Container */
+.form-error {
+  background-color: #fff;
+  color: red;
+  font-size: 0.8rem;
+  text-align: start;
+  padding: 0 40px;
+}
+
 .form-container {
-  background-color: #c48afa;
+  /* background-color: #c48afa; */
+  background-color: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -456,32 +728,35 @@ sec-para2-span {
   font-weight: bold;
 }
 
-/* Close Button */
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
-  color: #6a1b9a;
+  color: black;
 }
 
-/* Form Fields */
 .form-field input,
 .form-container textarea {
   max-width: 300px;
   min-width: 300px;
   padding: 12px;
-  margin: 10px 0;
-  border: 2px solid #c48afa;
+  /* margin: 10px 0; */
+  border: 1.59px solid gray;
   border-radius: 5px;
   font-size: 1rem;
   outline: none;
 }
 
+.form-container textarea {
+  min-height: 30px;
+  max-height: 80px;
+}
+
 .form-container input:focus,
 .form-container textarea:focus {
-  border-color: #6a1b9a;
+  border-color: black;
 }
 
 /* Submit Button */
@@ -490,7 +765,6 @@ sec-para2-span {
   background: black;
   color: white;
   border: none;
-  font-family: "Roboto", sans-serif;
   padding: 12px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -510,6 +784,210 @@ sec-para2-span {
   .form-container {
     width: 95%;
   }
+
+  .form-group label {
+    top: 13px;
+    left: 30px;
+  }
+
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:focus + label,
+  .form-group textarea:not(:placeholder-shown) + label {
+    top: -5px;
+    left: 25px;
+    font-size: 12px;
+  }
+
+  .form-error {
+    padding: 0 8px;
+  }
+}
+
+/* About us */
+.about-main-div {
+  margin-top: 12vh;
+  background-color: #d2aef4;
+  width: 100%;
+  height: 120vh;
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.about-image {
+  width: 100%;
+  height: 80vh;
+  border-radius: 1rem;
+}
+
+.about-body-div {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.about-text-heading {
+  font-size: 3rem;
+}
+
+.about-text-wrapper {
+  width: 50%;
+}
+
+.about-text {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.about-text p span {
+  font-weight: bold;
+}
+
+.about-image-div {
+  width: 40%;
+}
+
+.about-image-div img {
+  width: 100%;
+  height: 80%;
+  border-radius: 1rem;
+}
+
+/* Our Artist */
+.artist-div {
+  margin-top: 12vh;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  background-color: #d2aef4;
+  width: 100%;
+}
+
+.artist-wrapper .heading {
+  font-size: 4rem;
+}
+
+.artist-wrapper p {
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.artist-card-body {
+  margin: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper .card-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-wrapper {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.card-wrapper .card-name {
+  text-align: center;
+}
+
+/* Contact us */
+.contact-section {
+  padding-top: 80px;
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #777;
+}
+
+.contact-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 13px;
+  border: 1px solid gray;
+  max-width: 94%;
+  border-radius: 0.5rem;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.contact-form-error {
+  background-color: #fff;
+  color: red;
+  font-size: 0.8rem;
+  text-align: start;
+}
+
+.contact-form button:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+.map-section {
+  margin-top: 8rem;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 90vh;
+  border: none;
 }
 
 /* Footer */
@@ -518,8 +996,7 @@ sec-para2-span {
   align-items: center;
 }
 .footer-heading {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .company-logo .svg {
@@ -528,7 +1005,6 @@ sec-para2-span {
 }
 
 .footer-address {
-  font-family: "Roboto", sans-serif;
   width: 350px;
 }
 
@@ -541,28 +1017,30 @@ sec-para2-span {
 .link-column {
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 12px;
 }
 
 .footer-contaainer {
-  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 footer {
-  padding-block: 80px;
-  /* background-color: #ebf2fa; */
+  padding-block: 40px;
+  background-color: rgba(0, 0, 0, 0.936);
+}
+
+.link-column a,
+.footer-icon-heading,
+.footer-heading,
+.footer-address,
+.company-name {
+  color: white;
 }
 
 .hover-link {
   text-decoration: none;
   color: black;
-  font-family: "Roboto", sans-serif;
-}
-
-.hover-link:hover {
-  color: purple;
 }
 
 .footer-icon-div {
@@ -575,4 +1053,36 @@ footer {
 }
 .subfooter-text {
   text-align: center;
+  color: white;
+}
+
+/* Scroll to Top button */
+.top-btn {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  background-color: #c48afa;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#arrow {
+  animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes gototop {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
 }

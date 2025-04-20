@@ -1,31 +1,25 @@
-import { useState } from "react";
-import "../style.css";
-import "../mediaQuery.css";
+import { React, useState } from "react";
 import BackgroundVideo from "./BackgroundVideo";
 import BookAppointment from "./BookAppointment";
 import Features from "./Features";
 import Services from "./Services";
 import Slider from "./Slider";
 import TeamCard from "./TeamCard";
-import Footer from "./Footer";
-import Header from "./Header";
-import Navbar from "./Navbar";
+import TattooCategory from "./TattooCategory";
+import Hero from "./Hero";
+import "../style.css";
+import "../mediaQuery.css";
 
 const Body = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <>
-      <div className="navbar-main-div">
-        <Navbar setIsFormOpen={setIsFormOpen} />
-        {isFormOpen && <BookAppointment setIsFormOpen={setIsFormOpen} />}
-      </div>
-      <div className="header-main-div">
-        <Header setIsFormOpen={setIsFormOpen} />
+    <div className="scroll-container">
+      <div className="hero-main-div">
+        <Hero setIsFormOpen={setIsFormOpen} />
         {isFormOpen && <BookAppointment setIsFormOpen={setIsFormOpen} />}
       </div>
       <div className="slider-main-div">
-        <h1 className="slider-text-heading">#Tattoo Gallery</h1>
         <Slider />
       </div>
       <div className="features-main-div">
@@ -34,6 +28,9 @@ const Body = () => {
       <div className="teamcard-main-div">
         <TeamCard />
       </div>
+      <div className="TattooCategory-main-div">
+        <TattooCategory />
+      </div>
       <div className="services-main-div">
         <Services />
       </div>
@@ -41,10 +38,7 @@ const Body = () => {
         <BackgroundVideo setIsFormOpen={setIsFormOpen} />
         {isFormOpen && <BookAppointment setIsFormOpen={setIsFormOpen} />}
       </div>
-      <div className="footer-main-div">
-        <Footer />
-      </div>
-    </>
+    </div>
   );
 };
 

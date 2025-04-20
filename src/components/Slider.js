@@ -1,30 +1,56 @@
 import Marquee from "react-fast-marquee";
-import img1 from "../Assests/Tattoo1.jpeg";
-import img2 from "../Assests/Tatto2.jpeg";
-import img3 from "../Assests/Tatto3.jpeg";
-import img4 from "../Assests/Tatto4.jpeg";
-import img5 from "../Assests/Tatto5.jpeg";
+import img1 from "../Assests/Tattoo1-min.jpeg";
+import img2 from "../Assests/Tatto2-min.jpeg";
+import img3 from "../Assests/Tatto3-min.jpeg";
+import img4 from "../Assests/Tatto4-min.jpeg";
+import img5 from "../Assests/Tatto5-min.jpeg";
 import love from "../Assests/love.png";
 
 const Slider = () => {
   return (
     <>
-      <div className="slider-div">
-        <Marquee direction="left" speed={60} delay={2} pauseOnHover={true}>
+      <div className="slider-div" >
+      <h1 className="slider-text-heading">#Tattoo Gallery</h1>
+        <Marquee direction="left" speed={60} delay={2}>
           <div className="image_wrapper">
-            <img src={img1} alt="" style={{ height: "500px" }} />
+            <img
+              src={img1}
+              alt="Tatto image"
+              loading="lazy"
+              style={{ height: "500px" }}
+            />
           </div>
           <div className="image_wrapper">
-            <img src={img2} alt="" style={{ height: "500px" }} />
+            <img
+              src={img2}
+              alt="Tatto image"
+              loading="lazy"
+              style={{ height: "500px" }}
+            />
           </div>
           <div className="image_wrapper">
-            <img src={img3} alt="" style={{ height: "500px" }} />
+            <img
+              src={img3}
+              alt="Tatto image"
+              loading="lazy"
+              style={{ height: "500px" }}
+            />
           </div>
           <div className="image_wrapper">
-            <img src={img4} alt="" style={{ height: "500px" }} />
+            <img
+              src={img4}
+              alt="Tatto image"
+              loading="lazy"
+              style={{ height: "500px" }}
+            />
           </div>
           <div className="image_wrapper">
-            <img src={img5} alt="" style={{ height: "500px" }} />
+            <img
+              src={img5}
+              alt="Tatto image"
+              loading="lazy"
+              style={{ height: "500px" }}
+            />
           </div>
         </Marquee>
         <div className="slider-text-div container">

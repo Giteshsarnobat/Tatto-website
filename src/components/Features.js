@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import png1 from "../Assests/heart.png";
 import art1 from "../Assests/tattoArt1.jpg";
 import art2 from "../Assests/tattoArt2.jpg";
@@ -6,10 +7,16 @@ const Features = () => {
   return (
     <>
       <div className="feature-div container">
-        <div className="feature-card">
+        <motion.div
+          className="feature-card"
+          initial={{ opacity: 0, translateX: "20%" }}
+          whileInView={{ opacity: 1, scale: 1, translateX: "0%" }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <div className="feature-text-div">
             <div className="feature-text">
-              <p className="feature-text-heading">WHY CHOOSING US</p>
+              <p className="feature-text-heading">Why Choosing Us ?</p>
               <p className="feature-text-para">
                 Our experienced artists create unique, high-quality tattoos with
                 strict hygiene and safety standards. We use premium inks and
@@ -28,11 +35,11 @@ const Features = () => {
           </div>
           <div className="feature-img-div">
             <div className="artImage-div">
-              <img className="feature-img1" src={art1} />
-              <img className="feature-img2" src={art2} />
+              <img className="feature-img1" src={art1} loading="lazy" />
+              <img className="feature-img2" src={art2} loading="lazy" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

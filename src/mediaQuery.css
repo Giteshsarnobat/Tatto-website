@@ -5,39 +5,241 @@
     margin-right: 20px;
   }
 
+  .nav-toggle i {
+    font-size: 35px;
+  }
+
   .main-nav {
-    overflow: initial;
+    padding-inline: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-link {
     position: absolute;
-    background-color: #c48afa;
-    left: -100%;
-    top: 100%;
+    background-color: #d2aef4;
+    left: 0;
+    top: -800%;
     width: 100%;
     padding-block: 20px;
-    transition: 0.4s ease-out;
+    transition: 0.5s ease-out;
+  }
+
+  .nav-item a {
+    font-size: 1.8rem;
   }
 
   .nav-link.active {
     left: 0;
+    top: 100%;
   }
 
   .nav-link ul {
     flex-direction: column;
-  }
-  /* Service card */
-  .services-div {
-    padding-bottom: 100px;
+    align-items: start;
   }
 
+  .services-submenu {
+    top: 260px;
+  }
+
+  /* small category */
+  .smallcategory-text {
+    font-size: 1.3rem;
+  }
+
+  /* Hero */
+  .hero-div {
+    position: relative;
+    padding-top: 40px;
+    height: 100vw;
+  }
+
+  .hero-text-div {
+    position: absolute;
+    z-index: 2;
+    color: black;
+  }
+
+  .hero-text-h1 {
+    width: 80vw;
+    font-size: 3rem;
+  }
+
+  .hero-text-para {
+    padding-top: 2rem;
+    width: 75vw;
+    font-size: 1.3rem;
+  }
+
+  .hero-sec-btn {
+    font-size: 1.2rem;
+    width: 118%;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+  .hero-shape {
+    position: absolute;
+    height: 60vw;
+    width: 60vw;
+    border-radius: 50%;
+    top: 30%;
+    left: 45%;
+  }
+
+  /* Tattoo Gallery */
+  .slider-text-heading {
+    font-size: 3.3rem;
+  }
+
+  /* Features */
+  .feature-img1 {
+    top: 150px;
+    right: -15px;
+  }
+
+  .feature-img2 {
+    display: none;
+  }
+
+  /* Team card */
+  .teamcard-img {
+    width: 100%;
+    height: 390px;
+  }
+
+  /* Category Card */
+  .tattooCategory-heading {
+    font-size: 2.8rem;
+  }
+
+  /* Service card */
   .services-card-div {
-    gap: 20px;
+    gap: 30px;
+    min-width: 100%;
+    justify-content: space-between;
+  }
+
+  .services-div {
+    padding-bottom: 60px;
   }
 
   .service-card {
-    min-width: calc(43% - 10px);
-    height: 220px;
+    width: 40%;
+  }
+
+  .services-heading {
+    font-size: 2.5rem;
+  }
+
+  /* Background video */
+  .video-container {
+    height: 42vh;
+  }
+
+  .overlay-text {
+    font-size: 1.7rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 12px;
+  }
+
+  /* Our Artists */
+  .artist-div {
+    margin-top: 12vh;
+    padding-top: 4vh;
+    padding-bottom: 8vh;
+    width: 100%;
+  }
+
+  .artist-wrapper .heading {
+    font-size: 3rem;
+  }
+
+  .artist-wrapper p {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  /* About us */
+  .about-main-div {
+    margin-top: 12vh;
+    padding-top: 20px;
+    background-color: #d2aef4;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .about-heading {
+    font-size: 3rem;
+  }
+
+  .about-image {
+    height: 40vh;
+  }
+
+  .about-body-div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+
+  .about-text-heading {
+    font-size: 3rem;
+  }
+
+  .about-text-wrapper {
+    width: 100%;
+  }
+  .about-text {
+    font-size: 1.3rem;
+  }
+
+  .about-image-div {
+    width: 100%;
+  }
+
+  .about-image-div img {
+    width: 100%;
+    height: 40vh;
+    border-radius: 1rem;
+  }
+
+  /* Contact Us */
+  .contact-section {
+    padding-top: 160px;
+  }
+
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+
+  .map-section {
+    margin-top: 4rem;
+  }
+
+  .map-section iframe {
+    width: 100%;
+    height: 40vh;
+    border: none;
+  }
+
+  /* footer */
+  .footer-heading {
+    font-size: 1.5rem;
+  }
+
+  .hover-link {
+    font-size: 1.2rem;
   }
 }
 
@@ -146,6 +348,81 @@
 
 /* Mobile Device */
 @media screen and (max-width: 479px) {
+  /* small category */
+  .smallcategory-main-div {
+    margin-top: 12vh;
+    padding-top: 30px;
+    width: 100%;
+    height: 30vh;
+    background-color: #d2aef4;
+  }
+
+  .smallcategory-heading {
+    padding-top: 1.2rem;
+    font-size: 1.8rem;
+  }
+
+  .smallcategory-text {
+    font-size: 1rem;
+  }
+
+  .smallCate-image-heading {
+    font-size: 1.8rem;
+  }
+
+  /* Hero */
+  .hero-div {
+    position: relative;
+    padding-top: 80px;
+    height: 120vw;
+  }
+
+  .hero-text-div {
+    position: absolute;
+    z-index: 2;
+    color: black;
+  }
+
+  .hero-text-h1 {
+    width: 90vw;
+    font-size: 1.8rem;
+  }
+
+  .hero-text-para {
+    padding-top: 2rem;
+    width: 90vw;
+    font-size: 1rem;
+  }
+
+  .hero-sec-btn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .hero-shape {
+    position: absolute;
+    height: 70vw;
+    width: 70vw;
+    border-radius: 50%;
+    top: 24%;
+    left: 50%;
+  }
+
+  /* Navbar */
+  .nav-toggle i {
+    font-size: 25px;
+  }
+
+  .nav-item a {
+    font-size: 1.2rem;
+  }
+
+  li .btn {
+    font-size: 1rem;
+  }
+
   /* Header */
   .body-heading1,
   .body-heading2 {
@@ -168,7 +445,7 @@
 
   /* slider */
   .slider-text-heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .slider-text-para {
@@ -185,7 +462,7 @@
     margin: 20px;
     padding: 1rem;
     border-radius: 20px;
-    height: 530px;
+    height: 560px;
   }
 
   .feature-heading {
@@ -228,12 +505,21 @@
     height: 11rem;
   }
 
+  .feature-img1 {
+    top: -20px;
+    left: 9px;
+  }
+
+  .feature-img2 {
+    display: none;
+  }
+
   /* Team card */
   .teamcard-para {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .teamcard-header {
-    font-size: 32px;
+    font-size: 1.8rem;
   }
 
   .teamcard-img {
@@ -258,9 +544,18 @@
     font-size: 32px;
   }
 
+  /* Category Card */
+  .tattoocategry-card {
+    margin-top: 10px;
+  }
+
+  .tattooCategory-heading {
+    font-size: 1.8rem;
+  }
+
   /* Background video */
   .video-container {
-    height: 50vh;
+    height: 40vh;
   }
 
   .overlay-text {
@@ -269,11 +564,104 @@
 
   .cta-button {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 6px 12px;
   }
 
+  /* Our Artists */
+  .artist-div {
+    margin-top: 12vh;
+    padding-top: 4vh;
+    padding-bottom: 8vh;
+    width: 100%;
+  }
+
+  .artist-wrapper .heading {
+    font-size: 2rem;
+  }
+
+  .artist-wrapper p {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .artist-card-body {
+    margin: 4rem 0;
+    gap: 2rem;
+  }
+
+  /* About us */
+  .about-main-div {
+    margin-top: 12vh;
+    padding-top: 20px;
+    background-color: #d2aef4;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    height: 40vh;
+  }
+
+  .about-body-div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .about-text-heading {
+    font-size: 2rem;
+  }
+
+  .about-text-wrapper {
+    width: 100%;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-image-div {
+    width: 100%;
+  }
+
+  .about-image-div img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 1rem;
+  }
+
+  /* Contact Us */
+  .contact-section {
+    padding-top: 100px;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .map-section {
+    margin-top: 4rem;
+  }
+
+  .map-section iframe {
+    width: 100%;
+    height: 50vh;
+    border: none;
+  }
+
   /* Footer */
+  .footer-heading {
+    font-size: 1.3rem;
+  }
+
+  .hover-link {
+    font-size: 1rem;
+  }
   .subfooter-text {
     font-size: 0.9rem;
   }
