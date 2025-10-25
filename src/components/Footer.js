@@ -1,9 +1,9 @@
-import logo from "../Assests/logo.png";
 import fb from "../Assests/facbook.png";
 import insta from "../Assests/instagram.png";
 import twitter from "../Assests/twitter.png";
 import linkedin from "../Assests/linkedin.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -53,16 +53,16 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.3 }}
           >
             <h4 className="footer-heading">Important Links</h4>
-            <a href="" className="hover-link">
+            <Link to="/" className="hover-link">
               Home
-            </a>
-            <a href="" className="hover-link">
+            </Link>
+            <Link to="/artist" className="hover-link">
               Our Artist
-            </a>
-            <a href="" className="hover-link">
+            </Link>
+            <Link to="/smallCategory" className="hover-link">
               Our Catagories
-            </a>
-            <a href="" className="hover-link">
+            </Link>
+            <a href="#" className="hover-link">
               Pricing
             </a>
           </motion.div>
@@ -74,16 +74,16 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.3 }}
           >
             <h4 className="footer-heading">Other Links</h4>
-            <a href="" className="hover-link">
+            <Link to="/about" className="hover-link">
               About us
-            </a>
-            <a href="" className="hover-link">
+            </Link>
+            <Link to="/contact" className="hover-link">
               Contact us
-            </a>
-            <a href="" className="hover-link">
+            </Link>
+            <a href="#" className="hover-link">
               Privacy Policy
             </a>
-            <a href="" className="hover-link">
+            <a href="#" className="hover-link">
               Terms & Conditions
             </a>
           </motion.div>
@@ -97,7 +97,8 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
           >
-            All rights reserved &copy; 2025 info Edge(India)Ltd.
+            All rights reserved &copy; {new Date().getFullYear()} | Designed by
+            Ontrova Solutions
           </motion.p>
         </div>
       </footer>

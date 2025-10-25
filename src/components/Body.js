@@ -9,6 +9,7 @@ import TattooCategory from "./TattooCategory";
 import Hero from "./Hero";
 import "../style.css";
 import "../mediaQuery.css";
+import Testimonial from "./Testimonial";
 
 const Body = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -33,6 +34,9 @@ const Body = () => {
       </div>
       <div className="services-main-div">
         <Services />
+      </div>
+      <div className="testimonial-main-div">
+        <Testimonial />
       </div>
       <div className="backgroundVideo-main-div">
         <BackgroundVideo setIsFormOpen={setIsFormOpen} />

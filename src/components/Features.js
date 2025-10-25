@@ -16,21 +16,34 @@ const Features = () => {
         >
           <div className="feature-text-div">
             <div className="feature-text">
-              <p className="feature-text-heading">Why Choosing Us ?</p>
+              <p className="feature-text-heading">Why Choose ZenSpace ?</p>
               <p className="feature-text-para">
-                Our experienced artists create unique, high-quality tattoos with
-                strict hygiene and safety standards. We use premium inks and
-                equipment to ensure long-lasting results. Enjoy a personalized
-                design in a friendly and comfortable environment.
+                At ZenSpace, we believe tattoos should be as unique as the
+                person wearing them. With over
+                <b> 5 years of experience in art and tattooing,</b> our team
+                blends creativity, precision, and passion to bring your vision
+                to life. Every design is <b> custom-made</b> to reflect your
+                personality and story, ensuring you leave with a tattoo that
+                truly belongs to you.
               </p>
             </div>
             <div className="feature1-div">
               <img className="heart-png" src={png1} />
-              <h3 className="feature-heading">EXPERT IN TATTO DESIGN</h3>
+              <h3 className="feature-heading">
+                5+ Years of Experience in Art & Tattooing
+              </h3>
             </div>
             <div className="feature2-div">
               <img className="heart-png" src={png1} />
-              <h3 className="feature-heading">SUPERIOR STYLES</h3>
+              <h3 className="feature-heading">Custom, Personalized Designs</h3>
+            </div>
+            <div className="feature2-div">
+              <img className="heart-png" src={png1} />
+              <h3 className="feature-heading">Strict Hygiene & Premium Inks</h3>
+            </div>
+            <div className="feature2-div">
+              <img className="heart-png" src={png1} />
+              <h3 className="feature-heading">Friendly & Comfortable Studio Environment</h3>
             </div>
           </div>
           <div className="feature-img-div">

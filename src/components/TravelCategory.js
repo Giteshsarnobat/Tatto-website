@@ -1,10 +1,10 @@
-import SMALL_CATEGORY from "../utils/smallCategoryMockData";
 import { motion } from "framer-motion";
 import { IKContext, IKImage } from "imagekitio-react";
+import RELIGIOUS_CATEGORY from "../utils/religiousCategoryMockData";
 
 const urlEndpoint = "https://ik.imagekit.io/gitesh/";
 
-const SmallCategory = () => {
+const TravelCategory = () => {
   return (
     <>
       <div className="smallcategory-main-div">
@@ -33,11 +33,13 @@ const SmallCategory = () => {
 
       {/* Gallery Section */}
       <div>
-        <h1 className="smallCate-image-heading container">Our Small Tattoos</h1>
+        <h1 className="smallCate-image-heading container">
+          Our Religious Tattoos
+        </h1>
         <div className="category-com-div">
           <IKContext urlEndpoint={urlEndpoint}>
             <div className="tattoocategry-card container">
-              {SMALL_CATEGORY.map((c, index) => (
+              {RELIGIOUS_CATEGORY.map((c, index) => (
                 <motion.div
                   className="tattooCategory-card-body"
                   key={c.id}
@@ -47,8 +49,8 @@ const SmallCategory = () => {
                   viewport={{ once: true }}
                 >
                   <IKImage
-                    path={c.path} 
-                    transformation={[{ height:"300", width: "300", q: 100 }]}
+                    path={c.path}
+                    transformation={[{ height: "300", width: "300", q: 100 }]}
                     loading="lazy"
                     lqip={{ active: true }}
                     alt={`Image ${c.id}`}
@@ -64,4 +66,4 @@ const SmallCategory = () => {
   );
 };
 
-export default SmallCategory;
+export default TravelCategory;

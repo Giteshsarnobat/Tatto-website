@@ -9,9 +9,11 @@ import love from "../Assests/love.png";
 const Slider = () => {
   return (
     <>
-      <div className="slider-div" >
-      <h1 className="slider-text-heading">#Tattoo Gallery</h1>
-        <Marquee direction="left" speed={60} delay={2}>
+      <div className="slider-div">
+        <h1 className="slider-text-heading">
+          #Place where we create your story
+        </h1>
+        <Marquee direction="left" speed={80} delay={2} pauseOnHover={true}>
           <div className="image_wrapper">
             <img
               src={img1}
@@ -55,12 +57,8 @@ const Slider = () => {
         </Marquee>
         <div className="slider-text-div container">
           <p className="slider-text-para">
-            Every tattoo is a masterpiece, a reflection of your personality,
-            memories, and passion. At our studio, we blend creativity with
-            precision to craft unique and meaningful designs. Whether you seek
-            bold statements or intricate details, our skilled artists bring your
-            vision to life with high-quality ink and expert craftsmanship. Let
-            your skin be the canvas for timeless art!
+            "More than ink - <br/><b>ZENSPACE</b> creates tattoos that reflect your
+            journey,<br/> your strength, and your individuality."
           </p>
           <img className="slider-heart-png" src={love}></img>
         </div>

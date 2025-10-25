@@ -6,7 +6,8 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: "",
+    design: "",
+    time: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -27,6 +28,14 @@ const Contact = () => {
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Phone number must be exactly 10 digits.";
+    }
+
+    if (!formData.design) {
+      newErrors.design = "Please select option.";
+    }
+
+    if (!formData.time) {
+      newErrors.time = "Please enter time.";
     }
 
     setErrors(newErrors);
@@ -114,7 +123,9 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
             />
-            {errors.email && <p className="contact-form-error">{errors.email}</p>}
+            {errors.email && (
+              <p className="contact-form-error">{errors.email}</p>
+            )}
 
             <input
               type="tel"
@@ -123,14 +134,34 @@ const Contact = () => {
               value={formData.phone}
               onChange={handleChange}
             />
-            {errors.phone && <p className="contact-form-error">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="contact-form-error">{errors.phone}</p>
+            )}
 
-            <textarea
-              placeholder="Your Message"
-              name="message"
-              value={formData.message}
+            <select
+              name="design"
+              value={formData.design}
               onChange={handleChange}
-            ></textarea>
+            >
+              <option value="" disabled hidden>
+                Do you have a design in mind?
+              </option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            {errors.design && (
+              <p className="contact-form-error">{errors.design}</p>
+            )}
+
+            <input
+              type="text"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              placeholder="What is good time to connect with you?"
+            />
+            {errors.time && <p className="contact-form-error">{errors.time}</p>}
+
             <button type="submit">Book Appointment</button>
           </motion.form>
         </div>

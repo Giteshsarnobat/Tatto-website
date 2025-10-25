@@ -283,7 +283,7 @@
 
   /* slider */
   .slider-text-div {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .slider-main-div {
@@ -373,8 +373,8 @@
   /* Hero */
   .hero-div {
     position: relative;
-    padding-top: 80px;
-    height: 120vw;
+    padding-top: 70px;
+    height: 140vw;
   }
 
   .hero-text-div {
@@ -383,9 +383,17 @@
     color: black;
   }
 
+  .spalshing-video {
+    width: 60px;
+    height: auto;
+    vertical-align: middle; /* keeps it aligned with text */
+    border-radius: 4px;
+    margin: 0 7px;
+  }
+
   .hero-text-h1 {
     width: 90vw;
-    font-size: 1.8rem;
+    font-size: 1.99rem;
   }
 
   .hero-text-para {
@@ -445,11 +453,11 @@
 
   /* slider */
   .slider-text-heading {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   .slider-text-para {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .slider-heart-png {
@@ -462,11 +470,11 @@
     margin: 20px;
     padding: 1rem;
     border-radius: 20px;
-    height: 560px;
+    height: 680px;
   }
 
   .feature-heading {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .heart-png {
@@ -474,16 +482,12 @@
     width: 1rem;
   }
 
-  .feature-text-heading {
-    font-size: 2rem;
-  }
-
   .feature-text-para {
     font-size: 1rem;
   }
 
   .feature-text-heading {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .feature-text-para {
@@ -527,6 +531,10 @@
     height: 390px;
   }
 
+  .teamcard-btn {
+    width: 50%;
+  }
+
   /* Service card */
   .services-card-div {
     gap: 20px;
@@ -544,7 +552,17 @@
     font-size: 32px;
   }
 
+  .service-card-btn {
+    width: 83%;
+    height: 11%;
+    bottom: 50px;
+  }
+
   /* Category Card */
+  .tattooCategory-div {
+    margin-top: -20px;
+  }
+
   .tattoocategry-card {
     margin-top: 10px;
   }
@@ -555,15 +573,21 @@
 
   /* Background video */
   .video-container {
-    height: 40vh;
+    height: 50vh;
   }
 
   .overlay-text {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+
+  .overlay-text p {
     font-size: 0.9rem;
   }
 
   .cta-button {
     width: 100%;
+    height: 36px;
     font-size: 1rem;
     padding: 6px 12px;
   }
@@ -664,5 +688,97 @@
   }
   .subfooter-text {
     font-size: 0.9rem;
+  }
+
+  /* Studio slider */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Testimonial */
+  .testimonial-section {
+    padding: 40px 20px;
+  }
+
+  .testimonial-section .title {
+    font-size: 1.7rem;
+  }
+  .testimonial-card {
+    width: 100%;
+    height: 350px;
+    padding: 20px 1px;
+  }
+
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 35px;
+  }
+
+  .client-photo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .client-name {
+    margin: 4px 0 5px;
+    font-size: 1.3em;
+  }
+
+  .client-detail-text {
+    font-size: 0.9em;
+  }
+
+  .stars {
+    margin: 10px 35px;
+    justify-content: start;
+    gap: 1.5rem;
+  }
+
+  .stars .stars-rating {
+    font-size: 1.2rem;
+  }
+  .rating-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95em;
+    text-align: center;
+    line-height: 1.5;
+    margin: 10px 35px;
+  }
+
+  .carousel-buttons {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .carousel-buttons button {
+    padding: 8px 14px;
+    font-size: 1.2em;
+  }
+
+  /* Goto Top button */
+  .top-btn {
+    width: 55px;
+    height: 55px;
+    bottom: 6rem;
+    right: 1.2rem;
+  }
+
+  /* Whatsapp logo */
+  .whatsapp-icon {
+    width: 80px;
+    height: 80px;
   }
 }

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import video1 from "../Assests/Ink.mp4";
 
 const fadeInUpAnimation = {
   hidden: {
@@ -26,8 +27,17 @@ const Hero = ({ setIsFormOpen }) => {
           variants={fadeInUpAnimation}
         >
           <motion.h1 className="hero-text-h1" variants={fadeInUpAnimation}>
-            A Tattoo for Every Chapter of Your Life, Crafted with Passion for
-            You.
+            More than ink. <br /> It's your{" "}
+            <video
+              src={video1}
+              autoPlay
+              loop
+              muted
+              className="spalshing-video"
+            />
+            journey,
+            <br />
+            your art, your ZenSpace.
           </motion.h1>
           <motion.p className="hero-text-para" variants={fadeInUpAnimation}>
             When you get a tattoo that reflects your soul, your passions, your

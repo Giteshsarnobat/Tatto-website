@@ -7,20 +7,26 @@ export const categorySubMenu = [
   },
   {
     id: 2,
-    title: "Realistic",
-    path: "./consulting",
+    title: "Large",
+    path: "./religiousCategory",
     cName: "submenu-item",
   },
   {
     id: 3,
     title: "Religious",
-    path: "./design",
+    path: "./religiousCategory",
     cName: "submenu-item",
   },
   {
     id: 4,
     title: "Travel",
-    path: "./development",
+    path: "./travelCategory",
+    cName: "submenu-item",
+  },
+    {
+    id: 5,
+    title: "Cover-up",
+    path: "./coverupCategory",
     cName: "submenu-item",
   },
 ];

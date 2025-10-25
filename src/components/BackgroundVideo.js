@@ -8,8 +8,8 @@ const BackgroundVideo = ({ setIsFormOpen }) => {
           <source src={videoBg} type="video/mp4" />
         </video>
         <div className="overlay-text">
-          <h1>Ink Your Story</h1>
-          <p>Express yourself with stunning tattoos by expert artists.</p>
+          <h1>"ZenSpace - Where Your Story Becomes Timeless Art."</h1>
+          <p>Custom tattoos crafted with passion, precision, and meaning.</p>
           <button className="cta-button" onClick={() => setIsFormOpen(true)}>Book an Appointment</button>
         </div>
       </div>

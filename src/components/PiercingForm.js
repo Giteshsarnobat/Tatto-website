@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const BookAppointment = ({ setIsFormOpen }) => {
+const PiercingForm = ({ setPiercingFormOpen }) => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
-    design: "",
-    time: "",
+    myfile: "",
+    piercing: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -18,22 +17,17 @@ const BookAppointment = ({ setIsFormOpen }) => {
       newErrors.name = "Please enter your name.";
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address.";
-    }
-
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Phone number must be exactly 10 digits.";
     }
 
     if (!formData.design) {
-      newErrors.design = "Please select an option.";
+      newErrors.myfile = "Upload tattoo picture.";
     }
 
-    if (!formData.time) {
-      newErrors.time = "Please enter time.";
+    if (!formData.piercing) {
+      newErrors.piercing = "Please enter your piercing name.";
     }
 
     setErrors(newErrors);
@@ -51,14 +45,17 @@ const BookAppointment = ({ setIsFormOpen }) => {
     if (!validate()) return;
 
     alert(`Appointment Request Submitted!\nDesign in mind: ${formData.design}`);
-    setIsFormOpen(false);
+    setPiercingFormOpen(false);
   };
 
   return (
     <>
       <div className="form-overlay">
         <div className="form-container">
-          <span className="close-btn" onClick={() => setIsFormOpen(false)}>
+          <span
+            className="close-btn"
+            onClick={() => setPiercingFormOpen(false)}
+          >
             &times;
           </span>
           <h1 className="form-heading">Book Your Appointment</h1>
@@ -76,19 +73,6 @@ const BookAppointment = ({ setIsFormOpen }) => {
               {errors.name && <p className="form-error">{errors.name}</p>}
             </div>
 
-            {/* Email */}
-            <div className="form-group">
-              <input
-                type="email"
-                name="email"
-                placeholder=" "
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <label htmlFor="email">Your Email *</label>
-              {errors.email && <p className="form-error">{errors.email}</p>}
-            </div>
-
             {/* Phone */}
             <div className="form-group">
               <input
@@ -102,36 +86,25 @@ const BookAppointment = ({ setIsFormOpen }) => {
               {errors.phone && <p className="form-error">{errors.phone}</p>}
             </div>
 
-            {/* Dropdown - Design in Mind */}
+            {/* Dropdown - Reference pic or ideas */}
             <div className="form-group">
-              <select
-                name="design"
-                value={formData.design}
-                onChange={handleChange}
-              >
-                <option value="" disabled hidden></option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-              <label htmlFor="design">Do you have a design in mind? *</label>
-              {errors.design && <p className="form-error">{errors.design}</p>}
+              <input type="file" name="myfile" value={formData.myfile} />
+              <label htmlFor="myfile">Piercing reference pic *</label>
+              {errors.myfile && <p className="form-error">{errors.myfile}</p>}
             </div>
 
-            {/* Time */}
+            {/* Piercing name */}
             <div className="form-group">
               <input
                 type="text"
-                name="time"
+                name="piercing"
                 placeholder=" "
-                value={formData.time}
+                value={formData.piercing}
                 onChange={handleChange}
               />
-              <label htmlFor="time">
-                What is good time to connect with you? *
-              </label>
-              {errors.time && <p className="form-error">{errors.time}</p>}
+              <label htmlFor="piercing">Name of Piercing *</label>
+              {errors.piercing && <p className="form-error">{errors.piercing}</p>}
             </div>
-
             <button type="submit">Confirm Appointment</button>
           </form>
         </div>
@@ -140,4 +113,4 @@ const BookAppointment = ({ setIsFormOpen }) => {
   );
 };
 
-export default BookAppointment;
+export default PiercingForm;

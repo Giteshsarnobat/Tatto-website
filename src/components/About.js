@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import { IKContext, IKImage } from "imagekitio-react";
+import StudioSlider from "./StudioSlider";
+
+const urlEndpoint = "https://ik.imagekit.io/gitesh/";
 
 const About = () => {
   return (
@@ -14,33 +18,29 @@ const About = () => {
           >
             Our Workspace
           </motion.h1>
-
-          <motion.img
-            className="about-image"
-            src="https://images.squarespace-cdn.com/content/v1/645a279bf6479109759c303a/9d0852f6-9474-4ddd-8eda-aa9ec590fbc4/DSC07594.jpg"
-            loading="lazy"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-          />
+          <StudioSlider />
         </div>
       </div>
 
       <div className="about-wrapper-div container">
         <div className="about-body-div">
-          <motion.div
-            className="about-image-div"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://content3.jdmagicbox.com/v2/comp/navi-mumbai/w2/022pxx22.xx22.230406110415.a3w2/catalogue/inkstain-tattoo-studio-seawoods-navi-mumbai-tattoo-artists-3iju3zhavv.jpg"
-              loading="lazy"
-            />
-          </motion.div>
+          <IKContext urlEndpoint={urlEndpoint}>
+            <motion.div
+              className="about-image-div"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <IKImage
+                path="Studio/Studio5.png"
+                transformation={[{ height: "500", width: "400", q: 100 }]}
+                loading="lazy"
+                lqip={{ active: true }}
+                alt="Work space"
+              />
+            </motion.div>
+          </IKContext>
 
           <motion.div
             className="about-text-wrapper"
