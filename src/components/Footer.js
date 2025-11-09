@@ -89,12 +89,12 @@ const Footer = () => {
             <Link to="/contact" className="hover-link">
               Contact us
             </Link>
-            <a href="/privacy-policy" className="hover-link">
+            <Link to="/privacy-policy" className="hover-link">
               Privacy Policy
-            </a>
-            <a href="/terms" className="hover-link">
+            </Link>
+            <Link to="/terms" className="hover-link">
               Terms
-            </a>
+            </Link>
           </motion.div>
         </div>
         <div className="subfooter-div">

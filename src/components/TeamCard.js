@@ -42,15 +42,15 @@ const TeamCard = () => {
                 lqip={{ active: true }}
               />
               <h2>{artist.Name}</h2>
-              {/* <Link to={`/portfolio_${artist.pathName}/${artist.id}`} className="portfolio-btn">
+              <Link to={`/portfolio_${artist.pathName}/${artist.id}`} className="portfolio-btn">
               PORTFOLIO <FaArrowRight />
-              </Link> */}
-              <a
+              </Link>
+              {/* <a
                 href={`/portfolio_${artist.pathName}/${artist.id}`}
                 className="portfolio-btn"
               >
                 PORTFOLIO <FaArrowRight />
-              </a>
+              </a> */}
             </motion.div>
           ))}
         </div>

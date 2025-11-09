@@ -93,7 +93,6 @@ function AppContent() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
-
           <GotoTop />
           <WhatsAppButton />
           <Footer />

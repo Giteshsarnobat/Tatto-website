@@ -2,6 +2,7 @@ import { ARTISTCARD } from "../utils/artistsMockData";
 import { motion } from "framer-motion";
 import { IKContext, IKImage } from "imagekitio-react";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
@@ -100,12 +101,12 @@ const Artist = () => {
                     lqip={{ active: true }}
                   />
                   <h2 className="card-name">{artist.Name}</h2>
-                  <a
-                    href={`/portfolio_${artist.pathName}/${artist.id}`}
+                  <Link
+                    to={`/portfolio_${artist.pathName}/${artist.id}`}
                     className="portfolio-btn"
                   >
                     PORTFOLIO <FaArrowRight />
-                  </a>
+                  </Link>
                 </motion.div>
               );
             })}
