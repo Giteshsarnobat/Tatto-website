@@ -3,7 +3,7 @@ import CATEGORIES from "../utils/categoryMockData";
 import { motion } from "framer-motion";
 import { IKContext, IKImage } from "imagekitio-react";
 
-const urlEndpoint = "https://ik.imagekit.io/gitesh/";
+const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
 const TattooCategory = () => {
   const navigate = useNavigate();

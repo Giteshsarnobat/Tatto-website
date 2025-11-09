@@ -1,6 +1,11 @@
 @font-face {
   font-family: "SuisseIntl-Regular";
-  src: url(./SuisseIntl-Regular.ttf) format("truetype");
+  src: url(./SuisseIntl-Regular.woff2) format('woff2'),
+       url(./SuisseIntl-Regular.woff) format('woff');
+  
+   /* font-family: normal; */
+   font-style: normal;
+   font-display: swap;
 }
 
 

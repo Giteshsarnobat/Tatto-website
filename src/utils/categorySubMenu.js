@@ -5,12 +5,12 @@ export const categorySubMenu = [
     path: "./smallCategory",
     cName: "submenu-item",
   },
-  {
-    id: 2,
-    title: "Large",
-    path: "./religiousCategory",
-    cName: "submenu-item",
-  },
+  // {
+  //   id: 2,
+  //   title: "Large",
+  //   path: "./religiousCategory",
+  //   cName: "submenu-item",
+  // },
   {
     id: 3,
     title: "Religious",

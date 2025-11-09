@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CategoryDropdown from "./CategoryDropdown";
 import { navItems } from "../utils/navItems";
+import { IoCall } from "react-icons/io5";
 
 const Navbar = ({ setIsFormOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,12 @@ const Navbar = ({ setIsFormOpen }) => {
 
   const handleNavClick = () => {
     setIsOpen(false);
+  };
+
+  const phoneNumber = "7208388209"; // Replace with your number
+
+  const handleCallClick = () => {
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   const location = useLocation();
@@ -69,6 +76,11 @@ const Navbar = ({ setIsFormOpen }) => {
               );
             })}
             <li>
+              <button className="nav-call-btn" onClick={handleCallClick}>
+                <IoCall size={26} />
+              </button>
+            </li>
+            <li>
               <button
                 className="btn"
                 id="nav-btn"
@@ -83,6 +95,9 @@ const Navbar = ({ setIsFormOpen }) => {
             </li>
           </ul>
         </div>
+        <button className="call-btn-for-mobile" onClick={handleCallClick}>
+          <IoCall size={26} />
+        </button>
         <a
           href="#"
           id="nav-toggle"

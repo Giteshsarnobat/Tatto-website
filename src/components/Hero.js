@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import video1 from "../Assests/Ink.mp4";
+
+const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
 const fadeInUpAnimation = {
   hidden: {
@@ -29,7 +30,7 @@ const Hero = ({ setIsFormOpen }) => {
           <motion.h1 className="hero-text-h1" variants={fadeInUpAnimation}>
             More than ink. <br /> It's your{" "}
             <video
-              src={video1}
+              src={`${urlEndpoint}Videos/Ink.mp4`}
               autoPlay
               loop
               muted

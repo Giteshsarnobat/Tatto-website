@@ -47,7 +47,7 @@ const SMALL_CATEGORY = [
   {
     id: 10,
     name: "Jhon",
-    path: "Small Category/Small10.jpg", 
+    path: "Small Category/Small10.jpg",
   },
   {
     id: 11,
@@ -58,6 +58,56 @@ const SMALL_CATEGORY = [
     id: 12,
     name: "Jhon",
     path: "Small Category/Small12.jpg",
+  },
+  {
+    id: 13,
+    name: "Jhon",
+    path: "Small Category/Small13.jpg",
+  },
+  {
+    id: 14,
+    name: "Jhon",
+    path: "Small Category/Small14.jpg",
+  },
+  {
+    id: 15,
+    name: "Jhon",
+    path: "Small Category/Small15.jpg",
+  },
+  {
+    id: 16,
+    name: "Jhon",
+    path: "Small Category/Small16.jpg",
+  },
+  {
+    id: 17,
+    name: "Jhon",
+    path: "Small Category/Small17.jpg",
+  },
+  {
+    id: 18,
+    name: "Jhon",
+    path: "Small Category/Small18.jpg",
+  },
+  {
+    id: 19,
+    name: "Jhon",
+    path: "Small Category/Small19.jpg",
+  },
+  {
+    id: 20,
+    name: "Jhon",
+    path: "Small Category/Small20.jpg",
+  },
+  {
+    id: 21,
+    name: "Jhon",
+    path: "Small Category/Small21.jpg",
+  },
+  {
+    id: 22,
+    name: "Jhon",
+    path: "Small Category/Small22.jpg",
   },
 ];
 

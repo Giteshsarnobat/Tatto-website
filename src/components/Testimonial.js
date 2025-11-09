@@ -22,7 +22,7 @@ const Testimonial = () => {
   return (
     <section className="testimonial-section container">
       <motion.h2
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true, amount: 1 }}

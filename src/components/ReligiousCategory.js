@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { IKContext, IKImage } from "imagekitio-react";
 import RELIGIOUS_CATEGORY from "../utils/religiousCategoryMockData";
 
-const urlEndpoint = "https://ik.imagekit.io/gitesh/";
+const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
 const ReligiousCategory = () => {
   return (

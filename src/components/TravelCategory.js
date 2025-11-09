@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { IKContext, IKImage } from "imagekitio-react";
-import RELIGIOUS_CATEGORY from "../utils/religiousCategoryMockData";
+import TRAVEL_CATEGORY from "../utils/travelCategoryMockData";
 
-const urlEndpoint = "https://ik.imagekit.io/gitesh/";
+const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
 const TravelCategory = () => {
   return (
@@ -34,12 +34,12 @@ const TravelCategory = () => {
       {/* Gallery Section */}
       <div>
         <h1 className="smallCate-image-heading container">
-          Our Religious Tattoos
+          Our Travel Tattoos
         </h1>
         <div className="category-com-div">
           <IKContext urlEndpoint={urlEndpoint}>
             <div className="tattoocategry-card container">
-              {RELIGIOUS_CATEGORY.map((c, index) => (
+              {TRAVEL_CATEGORY.map((c, index) => (
                 <motion.div
                   className="tattooCategory-card-body"
                   key={c.id}

@@ -2,7 +2,7 @@ import SMALL_CATEGORY from "../utils/smallCategoryMockData";
 import { motion } from "framer-motion";
 import { IKContext, IKImage } from "imagekitio-react";
 
-const urlEndpoint = "https://ik.imagekit.io/gitesh/";
+const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
 const SmallCategory = () => {
   return (

@@ -1,5 +1,9 @@
 import { ARTISTCARD } from "../utils/artistsMockData";
 import { motion } from "framer-motion";
+import { IKContext, IKImage } from "imagekitio-react";
+import { FaArrowRight } from "react-icons/fa6";
+
+const urlEndpoint = "https://ik.imagekit.io/zenspace121/";
 
 const textRevealAnimation = {
   hidden: { opacity: 0, y: 40 },
@@ -71,27 +75,42 @@ const Artist = () => {
         </div>
       </div>
       <div className="artist-card container">
-        <div className="artist-card-body">
-          {ARTISTCARD.map((artist, index) => {
-            return (
-              <motion.div
-                className="card-wrapper"
-                key={artist.id}
-                initial={{ opacity: 0, translateX: "-40" }} // Start from right
-                whileInView={{ opacity: 1, translateX: "0" }} // Move to original position
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                  ease: "easeOut",
-                }} // Delay for staggered effect
-                viewport={{ once: true }}
-              >
-                <img className="card-img" src={artist.img} loading="lazy" />
-                <h2 className="card-name">{artist.Name}</h2>
-              </motion.div>
-            );
-          })}
-        </div>
+        <IKContext urlEndpoint={urlEndpoint}>
+          <div className="artist-card-body">
+            {ARTISTCARD.map((artist, index) => {
+              return (
+                <motion.div
+                  className="card-wrapper"
+                  key={artist.id}
+                  initial={{ opacity: 0, translateX: "-40" }} // Start from right
+                  whileInView={{ opacity: 1, translateX: "0" }} // Move to original position
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: "easeOut",
+                  }} // Delay for staggered effect
+                  viewport={{ once: true }}
+                >
+                  <IKImage
+                    className="card-img"
+                    path={artist.imgPath}
+                    transformation={[{ q: 100 }]}
+                    alt={artist.Name}
+                    loading="lazy"
+                    lqip={{ active: true }}
+                  />
+                  <h2 className="card-name">{artist.Name}</h2>
+                  <a
+                    href={`/portfolio_${artist.pathName}/${artist.id}`}
+                    className="portfolio-btn"
+                  >
+                    PORTFOLIO <FaArrowRight />
+                  </a>
+                </motion.div>
+              );
+            })}
+          </div>
+        </IKContext>
       </div>
     </>
   );

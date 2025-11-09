@@ -10,6 +10,7 @@ import Hero from "./Hero";
 import "../style.css";
 import "../mediaQuery.css";
 import Testimonial from "./Testimonial";
+import TestimonialMarquee from "./TestimonialMarquee";
 
 const Body = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -35,8 +36,11 @@ const Body = () => {
       <div className="services-main-div">
         <Services />
       </div>
-      <div className="testimonial-main-div">
+      {/* <div className="testimonial-main-div">
         <Testimonial />
+      </div> */}
+      <div>
+        <TestimonialMarquee />
       </div>
       <div className="backgroundVideo-main-div">
         <BackgroundVideo setIsFormOpen={setIsFormOpen} />

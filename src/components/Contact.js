@@ -89,13 +89,18 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h3>Visit Our Studio</h3>
-            <p>Mumbai, Maharashtra, India</p>
+            <p>
+              Shop No. 101st Floor, Zenspace Art And Tattoo, Akruti Commercial
+              Complex, MIDC Central Rd, near Akruti CentreGautam Nagar, Chakala
+              Industrial Area (MIDC), Andheri East,
+              Mumbai-400093,Maharashtra,India.
+            </p>
 
             <h3>Phone</h3>
-            <p>+91 9876543210</p>
+            <p>+91 7208388209</p>
 
             <h3>Email</h3>
-            <p>zeninktattoo@gmail.com</p>
+            <p>Zenspacetattoo@gmail.com</p>
           </motion.div>
 
           {/* Right Side - Contact Form */}

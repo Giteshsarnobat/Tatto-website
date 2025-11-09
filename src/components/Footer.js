@@ -22,19 +22,28 @@ const Footer = () => {
             </a> */}
             <h1 className="company-name">ZENSPACE</h1>
             <p className="footer-address">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Temporibus quisquam omnis harum eligendi autem quas tempore
-              aspernatur, voluptatem eveniet ut.
+              Shop No. 101st Floor, Zenspace Art And Tattoo, Akruti Commercial
+              Complex, MIDC Central Rd, near Akruti CentreGautam Nagar, Chakala
+              Industrial Area (MIDC), Andheri East,
+              Mumbai-400093,Maharashtra,India.
             </p>
             <div className="footer-icon-div">
               <p className="footer-icon-heading">
                 <strong>Connect with us</strong>
               </p>
 
-              <a className="footer-icon" href="#" target="_blank">
+              <a
+                className="footer-icon"
+                href="https://www.facebook.com/people/Zenspace-art-and-tattoo/100091522204140/"
+                target="_blank"
+              >
                 <img src={fb} alt="Icon" style={{ width: "30px" }} />
               </a>
-              <a className="footer-icon" href="#" target="_blank">
+              <a
+                className="footer-icon"
+                href="https://www.instagram.com/zenspace_tattoo/#"
+                target="_blank"
+              >
                 <img src={insta} alt="Icon" style={{ width: "30px" }} />
               </a>
               <a className="footer-icon" href="#" target="_blank">
@@ -80,11 +89,11 @@ const Footer = () => {
             <Link to="/contact" className="hover-link">
               Contact us
             </Link>
-            <a href="#" className="hover-link">
+            <a href="/privacy-policy" className="hover-link">
               Privacy Policy
             </a>
-            <a href="#" className="hover-link">
-              Terms & Conditions
+            <a href="/terms" className="hover-link">
+              Terms
             </a>
           </motion.div>
         </div>
